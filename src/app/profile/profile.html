@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="text-center my-4">Tienda de Pizzas Online - 4V Mario</h2>
+    <div class="row">
+        @for (pizza of pizzas; track $index) {
+            <div class="col-3 mb-4">
+                <div class="border p-3 text-center">{{ pizza }}</div>
+            </div>
+        }
+    </div>
+</div>

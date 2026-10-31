@@ -1,8 +1,13 @@
 import { Component, signal } from '@angular/core';
-import { Profile } from './profile/profile';
+import { Navbar } from './navbar/navbar';
+import { Footer } from './footer/footer';
+import { Header } from './header/header';
+import { ListaPizzas } from './lista-pizzas/lista-pizzas';
+import { Form } from './form/form';
+
 
 @Component({
-  imports: [Profile],
+  imports: [Navbar,Footer,Header, ListaPizzas, Form],
   selector: 'app-root',
   styleUrl: './app.scss',
   templateUrl: './app.html',

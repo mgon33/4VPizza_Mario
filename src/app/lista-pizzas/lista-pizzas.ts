@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   imports: [],
-  selector: 'app-profile',
-  styleUrl: './profile.scss',
-  templateUrl: './profile.html',
+  selector: 'app-lista-pizzas',
+  styleUrl: './lista-pizzas.scss',
+  templateUrl: './lista-pizzas.html',
 })
-export class Profile {
+export class ListaPizzas {
   //Lista pizzas 
   pizzas = [
     {
@@ -34,6 +34,4 @@ export class Profile {
       ingredientes: ["Salsa BBQ", "Carne picada", "Pollo", "Bacon"]
     }
   ];
-
-  metodoPago: string = "";
 }

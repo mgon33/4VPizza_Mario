@@ -46,5 +46,27 @@
     }
 }
 
+h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+.mi-nav-principal{
+    background-color: #c0392b;
+}
 
+.botones-paginas{
+    a{
+        color: black;
+        border: 2px solid black;
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+        background-color: #f39c12;
+        color: white;
+    }
+    }
+}

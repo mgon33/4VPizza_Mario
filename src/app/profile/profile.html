@@ -4,10 +4,10 @@
         <strong> 4V Pizzas - Mario González</strong>
     </div>
     <div class="d-flex gap-4 botones-paginas">
-        <a href="" class="text-decoration-none text-dark">Nuestras Pizzas</a>
-        <a href="" class="text-decoration-none text-dark">Realizar un pedido</a>
+        <a class="text-decoration-none ">Nuestras Pizzas</a>
+        <a class="text-decoration-none ">Realizar un pedido</a>
     </div>
-    <form class="d-flex buscador">
+    <form class="d-flex buscador" (submit)="$event.preventDefault()">
         <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar por Ingredientes">
         <button class="btn btn-sm btn-outline-dark" type="submit">Buscar</button>
     </form>
@@ -38,7 +38,7 @@
 
     <div class="form mt-5">
         <h3>Realiza tu Pedido!</h3>
-        <form action="formulario-pedido">
+        <form>
             <label for="direccion"><h6>Dirección de envío:</h6></label><br>
             <input type="text" id="direccion" name="direccion"><br><br>
 

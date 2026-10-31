@@ -34,4 +34,6 @@ export class Profile {
       ingredientes: ["Salsa BBQ", "Carne picada", "Pollo", "Bacon"]
     }
   ];
+
+  metodoPago: string = "";
 }

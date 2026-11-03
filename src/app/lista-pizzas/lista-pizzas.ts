@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { Pizza } from '../models/pizza';
 import { TarjetaPizza } from '../tarjeta-pizza/tarjeta-pizza';
+import { ignoreElements } from 'rxjs';
 
 @Component({
   imports: [TarjetaPizza],
@@ -16,4 +17,14 @@ export class ListaPizzas {
     new Pizza("Cuatro Quesos", 13, "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=300", ["Mozzarella", "Gorgonzola", "Parmesano", "Fontina"]),
     new Pizza("Barbacoa", 14, "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300", ["Salsa BBQ", "Carne picada", "Pollo", "Bacon"])
   ];
+
+  busqueda = input<string>("");
+
+  get pizzasFiltradas(){
+    return this.pizzas.filter(pizza => 
+      pizza.ingredientes.some(ingrediente => 
+        ingrediente.toLowerCase().includes(this.busqueda().toLowerCase())
+      )
+    );
+  }
 }

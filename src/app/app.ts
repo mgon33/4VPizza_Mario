@@ -14,4 +14,6 @@ import { Form } from './form/form';
 })
 export class App {
   protected readonly title = signal('4VPizza_Mario');
+
+  textoBusqueda = signal("");
 }

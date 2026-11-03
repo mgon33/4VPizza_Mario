@@ -7,8 +7,8 @@
         <a class="text-decoration-none ">Nuestras Pizzas</a>
         <a class="text-decoration-none ">Realizar un pedido</a>
     </div>
-    <form class="d-flex buscador" (submit)="$event.preventDefault()">
-        <input class="form-control form-control-sm me-2" type="search" placeholder="Buscar por Ingredientes">
+    <form class="d-flex buscador" (submit)="$event.preventDefault(); enviarBusqueda(texto.value)">
+        <input #texto class="form-control form-control-sm me-2" type="search" placeholder="Buscar por Ingredientes" (input)="enviarBusqueda(texto.value)">
         <button class="btn btn-sm btn-outline-dark" type="submit">Buscar</button>
     </form>
 </nav>

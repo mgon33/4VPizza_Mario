@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.scss',
   templateUrl: './navbar.html',
 })
-export class Navbar {}
+
+export class Navbar {
+  buscar = output<string>();
+
+  enviarBusqueda(texto: string){
+    this.buscar.emit(texto);
+  }
+}

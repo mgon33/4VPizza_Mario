@@ -1,7 +1,9 @@
 <div class="row">
-    @for (pizza of pizzas; track $index) {
+    @for (pizza of pizzasFiltradas; track $index) {
         <div class="col-12 col-md-6 col-lg-3 mb-4">
             <app-tarjeta-pizza [pizza]="pizza"></app-tarjeta-pizza>
         </div>
+    } @empty {
+        <p class="text-center text-muted">No hay pizzas con ese ingrediente.</p>
     }
 </div>

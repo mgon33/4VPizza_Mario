@@ -1,7 +1,7 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { Pizza } from '../models/pizza';
 import { TarjetaPizza } from '../tarjeta-pizza/tarjeta-pizza';
-import { ignoreElements } from 'rxjs';
+import { LineaPedido } from '../models/linea-pedido';
 
 @Component({
   imports: [TarjetaPizza],
@@ -9,6 +9,7 @@ import { ignoreElements } from 'rxjs';
   styleUrl: './lista-pizzas.scss',
   templateUrl: './lista-pizzas.html',
 })
+
 export class ListaPizzas {
   //Lista pizzas
   pizzas: Pizza[] = [
@@ -27,4 +28,6 @@ export class ListaPizzas {
       )
     );
   }
+
+  anadirPizza = output<LineaPedido>();
 }

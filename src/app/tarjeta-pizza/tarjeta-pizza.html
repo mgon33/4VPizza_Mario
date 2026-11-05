@@ -10,5 +10,9 @@
                 <li>{{ingrediente}}</li>
             }
         </ul>
+        <div class="d-flex gap-4 anadir-pizzas">
+            <input type="number" [formControl]="cantidad">
+            <button type="button" class="btn btn-sm btn-danger" [disabled]="cantidad.invalid" (click)="anadir()">Añadir</button>
+        </div>
     </div>
 </div>

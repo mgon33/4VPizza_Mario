@@ -2,7 +2,8 @@
 <app-header></app-header>
 
 <div class="container">
-    <app-lista-pizzas [busqueda]="textoBusqueda()"></app-lista-pizzas>
+    <app-lista-pizzas [busqueda]="textoBusqueda()" (anadirPizza)="anadirAlPedido($event)"></app-lista-pizzas>
+    <app-pedido [lineas]="lineasPedido()"></app-pedido>
     <app-form></app-form>
 </div>
 

@@ -1,10 +1,13 @@
-<app-navbar (buscar)="textoBusqueda.set($event)"></app-navbar>
+<app-navbar (buscar)="textoBusqueda.set($event)" (cambiarPagina)="paginaActual.set($event)"></app-navbar>
 <app-header></app-header>
 
 <div class="container">
-    <app-lista-pizzas [busqueda]="textoBusqueda()" (anadirPizza)="anadirAlPedido($event)"></app-lista-pizzas>
-    <app-pedido [lineas]="lineasPedido()"></app-pedido>
-    <app-form (limpiar)="vaciarPedido()"></app-form>
+    @if (paginaActual() === 'ListaPizzas') {
+            <app-lista-pizzas [busqueda]="textoBusqueda()" (anadirPizza)="anadirAlPedido($event)"></app-lista-pizzas>
+    } @else {
+        <app-pedido [lineas]="lineasPedido()"></app-pedido>
+        <app-form (limpiar)="vaciarPedido()"></app-form>
+    }
 </div>
 
 <app-footer></app-footer>

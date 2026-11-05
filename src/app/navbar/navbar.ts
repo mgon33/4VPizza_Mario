@@ -13,4 +13,6 @@ export class Navbar {
   enviarBusqueda(texto: string){
     this.buscar.emit(texto);
   }
+
+  cambiarPagina = output<string>();
 }

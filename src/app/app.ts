@@ -38,6 +38,9 @@ export class App {
 
   vaciarPedido(){
     this.lineasPedido.set([]);
+    this.paginaActual.set('ListaPizzas');
   }
+
+  paginaActual = signal("ListaPizzas");
 }
 

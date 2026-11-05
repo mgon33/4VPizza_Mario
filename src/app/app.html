@@ -4,7 +4,7 @@
 <div class="container">
     <app-lista-pizzas [busqueda]="textoBusqueda()" (anadirPizza)="anadirAlPedido($event)"></app-lista-pizzas>
     <app-pedido [lineas]="lineasPedido()"></app-pedido>
-    <app-form></app-form>
+    <app-form (limpiar)="vaciarPedido()"></app-form>
 </div>
 
 <app-footer></app-footer>

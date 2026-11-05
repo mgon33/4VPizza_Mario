@@ -35,5 +35,9 @@ export class App {
     }
 
   }
+
+  vaciarPedido(){
+    this.lineasPedido.set([]);
+  }
 }
 
